@@ -24,3 +24,4 @@ sudo systemctl start sysstat
 echo "Purging Unwanted Packages"
 sudo apt purge firefox-esr* -y
 sudo apt purge nano -y
+sudo ./TestWebsiteHTTP.sh
