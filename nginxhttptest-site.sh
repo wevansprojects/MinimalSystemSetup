@@ -23,7 +23,7 @@ echo "     index index.html index.htm;" |sudo tee -a /etc/nginx/sites-available/
 echo "    server_name www.terraction.com;" |sudo tee -a /etc/nginx/sites-available/test-site.conf
 echo " " |sudo tee -a /etc/nginx/sites-available/test-site.conf
 echo " location / {" |sudo tee -a /etc/nginx/sites-available/test-site.conf
-echo "   try_files $uri $uri/ =404;" >> |sudo tee -a /etc/nginx/sites-available/test-site.conf
+echo "   try_files $uri $uri/ =404;" |sudo tee -a /etc/nginx/sites-available/test-site.conf
 echo "  } " |sudo tee -a /etc/nginx/sites-available/test-site.conf
 echo " " |sudo tee -a /etc/nginx/sites-available/test-site.conf
 echo "}" |sudo tee -a /etc/nginx/sites-available/test-site.conf
