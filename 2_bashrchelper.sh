@@ -1,4 +1,5 @@
 #!/bin/bash
+cd $HOME
 echo "#Nginx Test and Reload Alias Commands" >> .bashrc
 echo "alias nt='sudo nginx -t'" >> .bashrc
 echo "alias nr='sudo systemctl reload nginx.service' " >> .bashrc
