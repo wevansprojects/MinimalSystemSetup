@@ -13,14 +13,7 @@ sudo apt install lynx -y
 
 echo "Setting Up SystStat Monitoring"
 cd /etc/default
-sudo sed 's/ENABLED=\"false\"/ENABLED=\"true\"/' sysstat
-cd /etc/cron.d
-echo "# Run system activity accountin tool every 10 minutes" >> sysstat
-echo " "
-echo "*/10 * * * * root /usr/lib64/sa/sa1 1 1" >> sysstat
-echo " "
-echo "# Generate a daily summary of process accounting at 23:55" >> sysstat
-echo "55 23 * * * root /usr/lib64/sa/sa2 -A" >> sysstat
+sudo sed -i 's/ENABLED=\"false\"/ENABLED=\"true\"/' sysstat
 
 echo "Applying System Service Startups"
 sudo systemctl enable unattended-upgrades
