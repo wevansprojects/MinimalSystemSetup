@@ -13,4 +13,4 @@ echo "alias tl='sudo trash-list'" >> .bashrc
 echo "alias tr='sudo trash-restore'" >> .bashrc
 echo "alias te='sudo trash-empty'" >> .bashrc
 echo "alias rm='echo "try using trash-cli commands instead! example: trash-put"'" >> .bashrc
-echo 'export HISTTIMEFORMAT="%d/%m/%y %T "' >> ~/.bash_profile
+echo 'export HISTTIMEFORMAT="%d/%m/%y %T "' >> ~/.bashrc
