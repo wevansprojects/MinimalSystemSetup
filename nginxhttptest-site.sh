@@ -25,7 +25,7 @@ echo " " >> /etc/nginx/sites-available/test-site.conf
 echo " location / {"
 echo "   try_files $uri $uri/ =404;" >> /etc/nginx/sites-available/test-site.conf
 echo "  } " >> /etc/nginx/sites-available/test-site.conf
-echo " "
+echo " " >> /etc/nginx/sites-available/test-site.conf
 echo "}" >> /etc/nginx/sites-available/test-site.conf
 echo "Append the Nginx Config File to include the test-site"
 echo "include /etc/nginx/conf.d*.conf;" |sudo tee -a /etc/nginx/nginx.conf
