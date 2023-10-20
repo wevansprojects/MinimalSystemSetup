@@ -24,4 +24,7 @@ sudo systemctl start sysstat
 echo "Purging Unwanted Packages"
 sudo apt purge firefox-esr* -y
 sudo apt purge nano -y
-sudo ./addhostfile.sh
+
+echo "Apending host file with test-site.com"
+echo "$(hostname -I) test-site.com" |sudo tee -a /etc/hosts
+cat /etc/hosts
