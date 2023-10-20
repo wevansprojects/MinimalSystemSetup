@@ -5,6 +5,7 @@ sudo apt update -y; sudo apt upgrade -y
 echo "Installing Required Packages"
 sudo apt install vim -y
 sudo apt install unattended-upgrades -y
+sudo apt install git -y
 sudo apt install trash-cli -y
 
 echo "Applying System Service Startups"
