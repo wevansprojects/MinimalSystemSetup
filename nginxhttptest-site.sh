@@ -15,18 +15,18 @@ echo "</body>" >> /var/www/test-site.com/html/index.html
 echo "</html>" >> /var/www/test-site.com/html/index.html
 
 echo "Create a simple http configuration file in Nginx"
-echo "server {" >> /etc/nginx/sites-available/test-site.conf
-echo "listen 80;" >> /etc/nginx/sites-available/test-site.conf
-echo "     listen [::]:80;" >> /etc/nginx/sites-available/test-site.conf
-echo "     root /var/www/terraction/html;" >> /etc/nginx/sites-available/test-site.conf
-echo "     index index.html index.htm;" >> /etc/nginx/sites-available/test-site.conf
-echo "    server_name www.terraction.com;" >> /etc/nginx/sites-available/test-site.conf
-echo " " >> /etc/nginx/sites-available/test-site.conf
-echo " location / {"
-echo "   try_files $uri $uri/ =404;" >> /etc/nginx/sites-available/test-site.conf
-echo "  } " >> /etc/nginx/sites-available/test-site.conf
-echo " " >> /etc/nginx/sites-available/test-site.conf
-echo "}" >> /etc/nginx/sites-available/test-site.conf
+echo "server {" |sudo tee -a /etc/nginx/sites-available/test-site.conf
+echo "listen 80;" |sudo tee -a /etc/nginx/sites-available/test-site.conf
+echo "     listen [::]:80;" |sudo tee -a /etc/nginx/sites-available/test-site.conf
+echo "     root /var/www/terraction/html;" |sudo tee -a /etc/nginx/sites-available/test-site.conf
+echo "     index index.html index.htm;" |sudo tee -a /etc/nginx/sites-available/test-site.conf
+echo "    server_name www.terraction.com;" |sudo tee -a /etc/nginx/sites-available/test-site.conf
+echo " " |sudo tee -a /etc/nginx/sites-available/test-site.conf
+echo " location / {" |sudo tee -a /etc/nginx/sites-available/test-site.conf
+echo "   try_files $uri $uri/ =404;" >> |sudo tee -a /etc/nginx/sites-available/test-site.conf
+echo "  } " |sudo tee -a /etc/nginx/sites-available/test-site.conf
+echo " " |sudo tee -a /etc/nginx/sites-available/test-site.conf
+echo "}" |sudo tee -a /etc/nginx/sites-available/test-site.conf
 echo "Append the Nginx Config File to include the test-site"
 echo "include /etc/nginx/conf.d*.conf;" |sudo tee -a /etc/nginx/nginx.conf
 echo "include /etc/nginx/sites-enabled/*;" |sudo tee -a /etc/nginx/nginx.conf
