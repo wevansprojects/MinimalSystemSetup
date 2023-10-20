@@ -30,3 +30,8 @@ echo "}" >> /etc/nginx/sites-available/test-site.conf
 echo "Append the Nginx Config File to include the test-site"
 echo "include /etc/nginx/conf.d*.conf;" |sudo tee -a /etc/nginx/nginx.conf
 echo "include /etc/nginx/sites-enabled/*;" |sudo tee -a /etc/nginx/nginx.conf
+echo "Create Symlink to Enable the Site"
+sudo ln -s /etc/nginx/sites-available/test-site/test-site.conf /etc/nginx/sites-enabled/test-site.conf
+echo "Start Nginx"
+sudo systemctl start nginx
+sudo systemctl enable nginx
