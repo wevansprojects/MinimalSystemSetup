@@ -7,6 +7,7 @@ sudo apt install vim -y
 sudo apt install unattended-upgrades -y
 sudo apt install git -y
 sudo apt install trash-cli -y
+sudo apt install lynx -y
 
 echo "Applying System Service Startups"
 sudo systemctl enable unattended-upgrades
