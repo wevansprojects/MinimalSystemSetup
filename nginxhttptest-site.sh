@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Installing nginx and ufw"  
-sudo apt install nginx
-sudo apt install ufw
+sudo apt install nginx -y
+sudo apt install ufw -y
 echo "Configuring Firewall Settings"
 sudo ufw allow 'Nginx HTTP'
 sudo ufw status
@@ -44,6 +44,6 @@ sudo trash-put /etc/nginx/sites-enabled/default
 sudo trash-empty
 echo "Start Nginx"
 sudo systemctl start nginx
-sudo systemctl enable nginx
-sudo systemctl reload nginx
+sudo systemctl enable nginx.service
+sudo systemctl reload nginx.service
 lynx http://www.testsite.com
