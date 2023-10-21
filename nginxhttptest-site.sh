@@ -45,3 +45,5 @@ sudo trash-empty
 echo "Start Nginx"
 sudo systemctl start nginx
 sudo systemctl enable nginx
+sudo systemctl reload nginx
+lynx http://www.testsite.com
