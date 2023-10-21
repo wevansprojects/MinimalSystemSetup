@@ -22,7 +22,7 @@ sudo systemctl enable sysstat
 sudo systemctl start sysstat
 
 echo "Purging Unwanted Packages"
-sudo apt purge firefox-esr* -y
+sudo apt purge firefox-esr -y
 sudo apt purge nano -y
 
 echo "Apending host file with testsite.com"
