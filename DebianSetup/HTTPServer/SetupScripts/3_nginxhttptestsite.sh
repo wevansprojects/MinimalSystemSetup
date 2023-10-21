@@ -46,4 +46,3 @@ echo "Start Nginx"
 sudo systemctl start nginx
 sudo systemctl enable nginx.service
 sudo systemctl reload nginx.service
-exec bash
