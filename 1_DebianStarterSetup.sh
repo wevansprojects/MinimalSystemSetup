@@ -25,6 +25,7 @@ echo "Purging Unwanted Packages"
 sudo apt purge firefox-esr* -y
 sudo apt purge nano -y
 
-echo "Apending host file with test-site.com"
-echo "$(hostname -I) test-site.com" |sudo tee -a /etc/hosts
+echo "Apending host file with testsite.com"
+echo "$(hostname -I) testsite.com" |sudo tee -a /etc/hosts
+echo "$(hostname -I) www.testsite.com" |sudo tee -a /etc/hosts
 cat /etc/hosts
