@@ -14,10 +14,10 @@ sudo chown -R $USER:$USER /var/www/testsite/html
 echo "Create a Simple Test Site Index Page"
 echo "<html>" >> /var/www/testsite/html/index.html
 echo "<head>" >> /var/www/testsite/html/index.html
-echo "    <title>Welcome to test-site.com</title>" >> /var/www/testsite/html/index.html
+echo "    <title>Welcome to testsite.com</title>" >> /var/www/testsite/html/index.html
 echo "</head>" >> /var/www/testsite/html/index.html
 echo "<body>" >> /var/www/testsite/html/index.html
-echo "    <h1>Success! Your Nginx server is successfully configured for <em>testsite.com</em>. </h1>" >> /var/www/test-site.com/html/index.html
+echo "    <h1>Success! Your Nginx server is successfully configured for <em>testsite.com</em>. </h1>" >> /var/www/testsite/html/index.html
 echo "<p>This is a sample page.</p>" >> /var/www/testsite/html/index.html
 echo "</body>" >> /var/www/testsite/html/index.html
 echo "</html>" >> /var/www/testsite/html/index.html
