@@ -3,6 +3,7 @@ echo "Creating the Certificates"
 mkdir $HOME/openssl
 cp self-signed-cert.sh $HOME/openssl
 cd $HOME/openssl
+sudo chmod u+x self-signed-cert.sh
 ./self-signed-cert.sh testsite.com 
 sudo cp rootCA.crt /usr/local/share/ca-certificates
 sudo cp testsite.com.crt testsite.com.key /etc/ssl
