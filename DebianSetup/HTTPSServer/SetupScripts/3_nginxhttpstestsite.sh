@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "Creating the Certificates"
+cd $HOME
 mkdir $HOME/openssl; cd $HOME/openssl
 ./selfsignedcert.sh testsite.com
 echo "Installing nginx and ufw"  
