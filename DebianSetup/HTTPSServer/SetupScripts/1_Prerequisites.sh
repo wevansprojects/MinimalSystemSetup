@@ -27,5 +27,4 @@ sudo apt purge nano -y
 
 echo "Apending host file with testsite.com"
 echo "$(hostname -I) testsite.com" |sudo tee -a /etc/hosts
-echo "$(hostname -I) www.testsite.com" |sudo tee -a /etc/hosts
 cat /etc/hosts
