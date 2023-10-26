@@ -1,10 +1,10 @@
 #!/bin/bash
 echo "Creating the Certificates"
-cd $HOME
-mkdir $HOME/openssl; cd $HOME/openssl
-./selfsignedcert.sh testsite.com
-sudo cp rootCA.crt /usr/local/share/ca-certificates
-sudo cp ~/openssl/testsite.com.crt ~/openssl/testsite.com.key /etc/ssl
+mkdir $HOME/openssl
+cp selfsignedcert.sh $HOME/openssl
+$HOME/openssl/./selfsignedcert.sh testsite.com 
+sudo cp $HOME/openssl/rootCA.crt /usr/local/share/ca-certificates
+sudo cp $HOME/openssl/testsite.com.crt $HOME/openssl/testsite.com.key /etc/ssl
 sudo update-ca-certificates
 echo "Installing nginx and ufw"  
 sudo apt install nginx -y
