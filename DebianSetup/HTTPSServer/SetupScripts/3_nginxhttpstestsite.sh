@@ -1,4 +1,7 @@
 #!/bin/bash
+echo "Creating the Certificates"
+mkdir $HOME/openssl; cd $HOME/openssl
+./selfsignedcert.sh testsite.com
 echo "Installing nginx and ufw"  
 sudo apt install nginx -y
 sudo apt install ufw -y
