@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "Creating the Certificates"
 mkdir $HOME/openssl
-cp selfsignedcert.sh $HOME/openssl
-$HOME/openssl/./selfsignedcert.sh testsite.com 
+cp self-signed-cert.sh $HOME/openssl
+$HOME/openssl/./self-signed-cert.sh testsite.com 
 sudo cp $HOME/openssl/rootCA.crt /usr/local/share/ca-certificates
 sudo cp $HOME/openssl/testsite.com.crt $HOME/openssl/testsite.com.key /etc/ssl
 sudo update-ca-certificates
