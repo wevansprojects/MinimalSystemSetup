@@ -25,9 +25,8 @@ echo "</html>" >> /var/www/testsite/html/index.html
 echo "Create a simple https configuration file in Nginx"
 echo "server {" |sudo tee -a /etc/nginx/sites-available/testsite
 echo " " |sudo tee -a /etc/nginx/sites-available/testsite
-echo "listen 443;" |sudo tee -a /etc/nginx/sites-available/testsite
+echo "listen 443 ssl;" |sudo tee -a /etc/nginx/sites-available/testsite
 echo " " |sudo tee -a /etc/nginx/sites-available/testsite
-echo "ssl   on;" |sudo tee -a /etc/nginx/sites-available/testsite
 echo "ssl_certificate    /etc/ssl/server.crt;" |sudo tee -a /etc/nginx/sites-available/testsite
 echo "ssl_certificate_key    /etc/ssl/server.key;" |sudo tee -a /etc/nginx/sites-available/testsite
 echo "     root /var/www/testsite/html;" |sudo tee -a /etc/nginx/sites-available/testsite
