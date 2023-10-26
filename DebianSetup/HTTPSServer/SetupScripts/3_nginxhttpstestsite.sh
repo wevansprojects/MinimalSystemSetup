@@ -3,6 +3,9 @@ echo "Creating the Certificates"
 cd $HOME
 mkdir $HOME/openssl; cd $HOME/openssl
 ./selfsignedcert.sh testsite.com
+sudo cp rootCA.crt /usr/local/share/ca-certificates
+sudo cp ~/openssl/testsite.com.crt ~/openssl/testsite.com.key /etc/ssl
+sudo update-ca-certificates
 echo "Installing nginx and ufw"  
 sudo apt install nginx -y
 sudo apt install ufw -y
@@ -31,8 +34,8 @@ echo "server {" |sudo tee -a /etc/nginx/sites-available/testsite
 echo " " |sudo tee -a /etc/nginx/sites-available/testsite
 echo "listen 443 ssl;" |sudo tee -a /etc/nginx/sites-available/testsite
 echo " " |sudo tee -a /etc/nginx/sites-available/testsite
-echo "ssl_certificate    /etc/ssl/server.crt;" |sudo tee -a /etc/nginx/sites-available/testsite
-echo "ssl_certificate_key    /etc/ssl/server.key;" |sudo tee -a /etc/nginx/sites-available/testsite
+echo "ssl_certificate    /etc/ssl/testsite.com.crt;" |sudo tee -a /etc/nginx/sites-available/testsite
+echo "ssl_certificate_key    /etc/ssl/testsite.com.key;" |sudo tee -a /etc/nginx/sites-available/testsite
 echo "     root /var/www/testsite/html;" |sudo tee -a /etc/nginx/sites-available/testsite
 echo "     index index.html index.htm nginx-debian.html;" |sudo tee -a /etc/nginx/sites-available/testsite
 echo "    server_name testsite www.testsite.com;" |sudo tee -a /etc/nginx/sites-available/testsite
