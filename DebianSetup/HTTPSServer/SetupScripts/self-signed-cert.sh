@@ -33,11 +33,11 @@ req_extensions = req_ext
 distinguished_name = dn
 
 [ dn ]
-C = US
-ST = California
-L = San Fransisco
-O = MLopsHub
-OU = MlopsHub Dev
+C = PH
+ST = None
+L = Manila
+O = TestingSites
+OU = TestingSites Dev
 CN = ${DOMAIN}
 
 [ req_ext ]
