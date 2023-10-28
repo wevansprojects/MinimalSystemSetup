@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 #https://www.linux-live.org/#explore
 #https://helpdeskgeek.com/linux-tips/make-a-custom-live-linux-distro-with-linux-live-kit/
 echo " ----------------------------------"
