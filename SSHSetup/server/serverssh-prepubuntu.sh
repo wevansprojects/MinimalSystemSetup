@@ -31,7 +31,7 @@ echo "ClientAliveCountMax 2" >> sshd_config
 echo "TCPKeepAlive no" >> sshd_config
 echo "PermitRootLogin no" >> sshd_config
 echo "AuthorizedKeysFile      .ssh/authorized_keys" >> sshd_config
-echo "PermitEmptyPasswords yes" >> sshd_config
+echo "PermitEmptyPasswords no" >> sshd_config
 echo "KbdInteractiveAuthentication no" >> sshd_config
 echo "UsePAM yes" >> sshd_config
 echo "X11Forwarding no" >> sshd_config
