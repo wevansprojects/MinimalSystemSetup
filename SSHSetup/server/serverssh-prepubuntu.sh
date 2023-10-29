@@ -16,7 +16,8 @@ printf "\n"
 echo "Backup Old SSH File and Replace It"
 cd /etc/ssh
 location=$(pwd)
-sudo cp $location/sshd_config sshd_config_old
+cd $location
+sudo cp sshd_config sshd_config_old
 sudo rm sshd_config
 sudo cp sshd_config /etc/ssh/
 sudo chown root:root /etc/ssh/sshd_config
