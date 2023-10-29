@@ -10,4 +10,4 @@ echo "Run the command below this will add the new ssh key to the remote server: 
 echo "ssh-copy-id -f -i ~/.ssh/$certname -p $pnumber $usr@$ip"
 
 echo "IMPORTANT: The Correct Way To Authenticate Is To Use This Command "
-ssh -i .ssh/$certname -p $pnumber $user@$ip
+echo "ssh -i .ssh/$certname -p $pnumber $user@$ip"
