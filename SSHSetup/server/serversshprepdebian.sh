@@ -11,6 +11,7 @@ sudo ufw allow 49155
 printf "\n"
 
 echo "Firewall Change See Below"
+sudo ufw enable
 sudo ufw status verbose
 printf "\n"
 echo "Backup Old SSH File and Replace It"
