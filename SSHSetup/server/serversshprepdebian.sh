@@ -32,8 +32,9 @@ echo "Port 49155" >> sshd_config
 echo "PermitRootLogin no" >> sshd_config
 echo "AuthorizedKeysFile      %h/.ssh/authorized_keys" >> sshd_config
 echo "KbdInteractiveAuthentication no" >> sshd_config
+echo "PasswordAuthentication no" >> sshd_config
 echo "PermitEmptyPasswords yes" >> sshd_config
-echo "UsePAM yes" >> sshd_config
+echo "UsePAM no" >> sshd_config
 echo "X11Forwarding no" >> sshd_config
 echo "Subsystem       sftp    /usr/lib/openssh/sftp-server" >> sshd_config
 
