@@ -4,6 +4,9 @@ sudo rm /etc/kernel/postinst.d/z50-raspi-firmware
 sudo rm /etc/kernel/postrm.d/z50-raspi-firmware
 sudo rm /etc/initramfs/post-update.d/z50-raspi-firmware
 sudo apt purge raspi-firmware
+sudo apt purge libreoffice*
+sudo apt autoremove libreoffice
+
 
 sudo apt-get autoclean
 sudo apt-get clean
