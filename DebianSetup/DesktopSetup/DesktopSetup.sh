@@ -21,9 +21,10 @@ sudo systemctl start unattended-upgrades
 sudo systemctl enable sysstat
 sudo systemctl start sysstat
 
-sudo apt install flatpak
+sudo apt install flatpak gnome-software-plugin-flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 echo "Purging Unwanted Packages"
 sudo apt purge firefox-esr -y
 sudo apt purge nano -y
+
