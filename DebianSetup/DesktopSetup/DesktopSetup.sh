@@ -67,4 +67,6 @@ echo "alias te='sudo trash-empty'" >> .bashrc
 echo "alias rm='echo "try using trash-cli commands instead! example: trash-put"'" >> .bashrc
 echo 'export HISTTIMEFORMAT="%d/%m/%y %T "' >> ~/.bashrc
 clear
+echo "For accessing new .deb software packages from the backports repo"
+echo "Type: sudo apt install -t bookworm-backports package-name"
 echo "SCRIPT COMPLETE Please CLOSE THE TERMINAL WINDOW!!!"
