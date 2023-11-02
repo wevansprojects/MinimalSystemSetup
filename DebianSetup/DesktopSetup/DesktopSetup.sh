@@ -3,9 +3,9 @@ echo "Updating the System"
 sudo rm /etc/kernel/postinst.d/z50-raspi-firmware
 sudo rm /etc/kernel/postrm.d/z50-raspi-firmware
 sudo rm /etc/initramfs/post-update.d/z50-raspi-firmware
-sudo apt purge raspi-firmware
-sudo apt purge libreoffice*
-sudo apt autoremove libreoffice
+sudo apt purge raspi-firmware -y
+sudo apt purge libreoffice* -y
+sudo apt autoremove libreoffice -y
 
 
 sudo apt-get autoclean
@@ -37,12 +37,12 @@ sudo systemctl enable sysstat
 sudo systemctl start sysstat
 
 echo "Installing Flatpak"
-sudo apt install flatpak gnome-software-plugin-flatpak
+sudo apt install flatpak gnome-software-plugin-flatpak -y
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 echo "Installing VLC and Multimedia Codecs"
-sud apt install libavcodec-extra
-sudo apt install vlc
+sud apt install libavcodec-extra -y
+sudo apt install vlc -y
 
 echo "Purging Unwanted Packages"
 sudo apt purge firefox-esr -y
