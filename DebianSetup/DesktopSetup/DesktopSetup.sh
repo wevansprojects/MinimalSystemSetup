@@ -41,7 +41,8 @@ sudo apt install flatpak gnome-software-plugin-flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 echo "Installing VLC and Multimedia Codecs"
-sud apt install libavcodec-extra vlc
+sud apt install libavcodec-extra
+sudo apt install vlc
 
 echo "Purging Unwanted Packages"
 sudo apt purge firefox-esr -y
@@ -50,7 +51,7 @@ sudo apt purge nano -y
 echo "Adding Debian Backports"
 cd /etc/apt/sources.list.d
 sudo touch backports.list
-echo "deb http://debian.org/debian bookworm-backports main " >> backports.list
+echo "deb http://debian.org/debian bookworm-backports main " |sudo tee backports.list
 sudo apt update
 
 echo "Setting Up Personal Bashrc"
