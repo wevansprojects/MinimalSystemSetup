@@ -44,6 +44,12 @@ echo "Purging Unwanted Packages"
 sudo apt purge firefox-esr -y
 sudo apt purge nano -y
 
+echo "Adding Debian Backports"
+cd /etc/apt/sources.list.d
+sudo touch backports.list
+echo "deb http://debian.org/debian bookworm-backports main " >> backports.list
+sudo apt update
+
 echo "Setting Up Personal Bashrc"
 cd $HOME
 echo "#Nginx Test and Reload Alias Commands" >> .bashrc
