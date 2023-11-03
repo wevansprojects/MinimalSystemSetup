@@ -37,8 +37,9 @@ sudo systemctl enable sysstat
 sudo systemctl start sysstat
 
 echo "Installing Flatpak"
-sudo apt install flatpak gnome-software-plugin-flatpak -y
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo apt install flatpak -y 
+sudo apt install gnome-software-plugin-flatpak -y
+sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 echo "Installing VLC and Multimedia Codecs"
 sud apt install libavcodec-extra -y
@@ -48,10 +49,12 @@ echo "Purging Unwanted Packages"
 sudo apt purge firefox-esr -y
 sudo apt purge nano -y
 
+echo "Installing Chromium"
+sudo apt install chromium
+
 echo "Adding Debian Backports"
-cd /etc/apt/sources.list.d
-sudo touch backports.list
-echo "deb http://debian.org/debian bookworm-backports main " |sudo tee backports.list
+sudo touch /etc/apt/sources.list.d/backports.list
+echo "deb http://debian.org/debian bookworm-backports main" |sudo tee /etc/apt/sources.list.d/backports.list
 sudo apt update
 
 echo "Setting Up Personal Bashrc"
