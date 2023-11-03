@@ -1,12 +1,11 @@
 #!/bin/bash
 echo "Updating the System"
+sudo apt purge libreoffice* -y
+sudo apt autoremove libreoffice -y
 sudo rm /etc/kernel/postinst.d/z50-raspi-firmware
 sudo rm /etc/kernel/postrm.d/z50-raspi-firmware
 sudo rm /etc/initramfs/post-update.d/z50-raspi-firmware
 sudo apt purge raspi-firmware -y
-sudo apt purge libreoffice* -y
-sudo apt autoremove libreoffice -y
-
 
 sudo apt-get autoclean
 sudo apt-get clean
