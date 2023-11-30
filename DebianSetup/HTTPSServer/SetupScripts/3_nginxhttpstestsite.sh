@@ -16,7 +16,7 @@ sudo ufw allow 'Nginx HTTPS'
 sudo ufw status
 sudo systemctl enable ufw
 sudo systemctl start ufw
-#sudo ufw enable
+sudo ufw enable
 sudo mkdir -p /var/www/testsite/html
 sudo chown -R $USER:$USER /var/www/testsite/html
 
