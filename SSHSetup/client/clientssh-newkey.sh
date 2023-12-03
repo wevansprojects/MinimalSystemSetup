@@ -26,7 +26,7 @@ echo "Enter an SSH Keyname:"
 echo "When prompted for a passphrase press <enter>"
 printf "\n"
 read keyname
-ssh-keygen -t ecsa -b 521 -f $keyname
+ssh-keygen -t ecdsa -b 521 -f $keyname
 mv $keyname $keyname.pub ~/.ssh
 sudo chmod 600 ~/.ssh/$keyname
 sudo chmod 644 ~/.ssh/$keyname.pub
