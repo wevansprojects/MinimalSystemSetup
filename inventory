@@ -1,0 +1,18 @@
+Server ansible_host=IP ansible_private_key_file=/$HOME/$USER/.ssh/key ansible_ssh_user=user
+
+#Application servers
+[app]
+IP ansible_port=port
+
+#Database server
+[db]
+#IP
+
+#Group 'multi' with all servers
+[multi:children]
+app
+#db
+
+#Variables that will be applied to all servers
+[multi:vars]
+ansible_user=user
