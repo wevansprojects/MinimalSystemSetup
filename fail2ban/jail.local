@@ -20,11 +20,6 @@
 # [DEFAULT]
 # bantime = 1h
 #
-# [sshd]
-# enabled = true
-#
-# See jail.conf(5) man page for more information
-
 
 
 # Comments: use '#' for comment lines and ';' (following a space) for inline comments
@@ -279,7 +274,7 @@ action = %(action_)s
 mode   = agressive
 port    = 49155
 #logpath = %(sshd_log)s
-#backend = %(sshd_backend)s
+backend=systemd
 enabled = true
 
 [dropbear_backend]
