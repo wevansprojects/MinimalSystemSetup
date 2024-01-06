@@ -4,7 +4,9 @@ echo "Note it is assumed SSH Server and client are already installed"
 printf "\n"
 
 mkdir $HOME/.ssh
+sudo chmod 700 $HOME/.ssh
 touch $HOME/.ssh/authorized_keys
+sudo chmod 600 $HOME/.ssh/authorized_keys
 
 echo "Adding a unique port for ssh in the firewall"
 echo "We are assuming the default firewall is public"
