@@ -3,6 +3,10 @@ echo "This Script will prepare the Server for SSH"
 echo "Note it is assumed SSH Server and client are already installed"
 printf "\n"
 
+sudo apt install ufw
+mkdir ~/.ssh
+touch ~/.ssh/authorized_keys
+
 echo "Adding a unique port for ssh in the firewall"
 printf "\n"
 
