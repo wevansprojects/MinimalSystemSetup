@@ -3,6 +3,9 @@ echo "This Script will prepare the Server for SSH"
 echo "Note it is assumed SSH Server and client are already installed"
 printf "\n"
 
+mkdir $HOME/.ssh
+touch $HOME/.ssh/authorized_keys
+
 echo "Adding a unique port for ssh in the firewall"
 echo "We are assuming the default firewall is public"
 printf "\n"
