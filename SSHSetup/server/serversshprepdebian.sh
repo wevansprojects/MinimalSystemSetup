@@ -5,7 +5,9 @@ printf "\n"
 
 sudo apt install ufw
 mkdir $HOME/.ssh
+sudo chmod 700 $HOME/.ssh
 touch $HOME/.ssh/authorized_keys
+sudo chmod 600 $HOME/.ssh/authorized_keys
 
 echo "Adding a unique port for ssh in the firewall"
 printf "\n"
@@ -20,7 +22,7 @@ sudo ufw status verbose
 printf "\n"
 echo "Backup Old SSH File and Replace It"
 cd /etc/ssh
-sudo cp sshd_config ssh_config_old
+sudo cp sshd_config sshd_config_old
 sudo rm sshd_config
 cd /home/$USER 
 touch sshd_config
