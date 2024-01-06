@@ -1,7 +1,6 @@
 #!/bin/bash
 sudo apt update
 sudo apt install fail2ban
-sudo systemctl status fail2ban.service
 cd /etc/fail2ban
 sudo cp $HOME/MinimalSystemSetup/fail2ban/jail.local /etc/fail2ban/jail.local
 sudo cp $HOME/MinimalSystemSetup/fail2ban/filter.d/nginx-badbots.conf /etc/fail2ban/filter.d/
