@@ -3,6 +3,11 @@ echo "This Script will prepare the Server for SSH"
 echo "Note it is assumed SSH Server and client are already installed"
 printf "\n"
 
+sudo dnf install openssh-clients.x86_64 -y
+sudo dnf install openssh.x86_64 -y
+sudo dnf install openssh-server.x86_64 -y
+sudo dnf install open-askpass.x86_64 -y
+
 mkdir $HOME/.ssh
 sudo chmod 700 $HOME/.ssh
 touch $HOME/.ssh/authorized_keys
