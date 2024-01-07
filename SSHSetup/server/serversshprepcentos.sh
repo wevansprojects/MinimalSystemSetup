@@ -1,6 +1,5 @@
 #!/bin/bash
 echo "This Script will prepare the Server for SSH"
-echo "Note it is assumed SSH Server and client are already installed"
 printf "\n"
 
 sudo dnf install openssh-clients.x86_64 -y
