@@ -63,14 +63,30 @@ flatpak install flathub com.github.tchx84.Flatseal
 flatpak install flathub io.github.martinrotter.rssguardlite -y
 flatpak install flathub org.gnome.meld -y
 flatpak install flathub io.github.giantpinkrobots.flatsweep -y
-flatpak install flathub org.kde.krdc -y
 flatpak install flathub app.ytmdesktop.ytmdesktop -y
 flatpak install flathub com.skype.Client -y
 flatpak install flathub com.obsproject.Studio -y
 flatpak install flathub org.gnome.DejaDup -y
 flatpak install flathub org.libreoffice.LibreOffice -y
 flatpak install flathub io.github.dvlv.boxbuddyrs -y
-# flatpak run net.mkiol.SpeechNote
+flatpak install flathub net.davidotek.pupgui2 -y
+flatpak install flathub org.gnome.FontManager -y
+flatpak install flathub us.zoom.Zoom -y
+flatpak install flathub app.ytmdesktop.ytmdesktop -y
+flatpak install flathub com.github.tchx84.Flatseal -y
+flatpak install flathub com.obsproject.Studio -y
+flatpak install flathub com.skype.Client -y
+flatpak install flathub io.dbeaver.DBeaverCommunity -y
+flatpak install flathub io.github.dvlv.boxbuddyrs -y
+flatpak install flathub io.github.flattool.Warehouse -y
+flatpak install flathub io.github.giantpinkrobots.flatsweep -y
+flatpak install flathub io.github.martinrotter.rssguardlite -y
+flatpak install flathub md.obsidian.Obsidian -y
+#flatpak install net.mkiol.SpeechNote -y
+flatpak install flathub org.gnome.Builder -y
+flatpak install flathub org.kde.kdenlive -y
+flatpak install flathub org.kde.krdc -y
+
 
 echo "Cloning Personal Git Hub Repos"
 #git clone https://github.com/wevansprojects/MinimalSystemSetup.git
