@@ -1,0 +1,8 @@
+#############################
+#Backup Configuaration File #
+#############################
+HOME_DIR:/home/username/
+CONFIG_PATH:/home/username/SystemBackups/conf/backupconf
+ARCHIVE_FOLDER:/home/username/Downloads/archives/
+HOME_EXCLUSIONS:.steam,.ssr,.dotnet,.mono,.nuget,.putt,.kivy.,.m2,.nuget,.p2,.vim,.zoom,.vscode,.local/share/Trash,Downloads,anaconda3
+ROOT_VAR_EXCLUSIONS:var/run,var/cache,var/tmp
