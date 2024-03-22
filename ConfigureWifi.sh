@@ -5,7 +5,7 @@ nmtuichecker=$(whereis nmcli|cut -d ":" -f2|cut -d" " -f2)
 
 if [[ -f "$nmtuichecker"  ]]
 then      
-   echo "nmcli is already installed!!!" 2&> /dev/null
+   echo "nmcli already installed!!!" 2&> /dev/null
 else 
      echo "nmcli is NOT installed!!!"
      echo "please install nmcli for this tool to work"
