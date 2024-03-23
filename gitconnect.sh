@@ -9,3 +9,7 @@ git add .
 git commit -m "Initial commit"
 git status
 git push --set-upstream origin main
+rm testfile.txt
+git add .
+git commit -m "Initial commit"
+git push
