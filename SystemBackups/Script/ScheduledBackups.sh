@@ -25,6 +25,6 @@ else
       echo "Has there been any Server Network or Configuration Changes ?"
       echo "-----------------------------------"
       echo "Exiting Script"
-      echo "Bye!!!"
+      echo "Bye!"
       exit
 fi
