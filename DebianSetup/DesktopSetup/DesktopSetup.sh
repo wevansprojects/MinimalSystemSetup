@@ -17,14 +17,6 @@ sudo apt install timeshift -y
 sudo apt install bleachbit -y
 sudo apt install variety -y
 
-echo "Installing Calibre Ebook Reader"
-sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
-
-echo "Installing Libation Audible Converter"
-cd ~/Downloads
-sudo wget https://github.com/rmcrackan/Libation/releases/download/v11.1.0/Libation.11.1.0-linux-chardonnay-amd64.deb
-sudo dpkg -i Libation.11.1.0-linux-chardonnay-amd64.deb
-
 echo "Installing Flatpak"
 sudo apt install flatpak -y 
 sudo apt install gnome-software-plugin-flatpak -y
@@ -59,6 +51,14 @@ sudo cp *.rules /etc/udev/rules.d
 cd /etc/udev/rules.d
 sudo chown user:user 60-steam-input.rules
 sudo chown user:user 60-steam-vr.rules
+
+echo "Installing Calibre Ebook Reader"
+sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
+
+echo "Installing Libation Audible Converter"
+cd ~/Downloads
+sudo wget https://github.com/rmcrackan/Libation/releases/download/v11.1.0/Libation.11.1.0-linux-chardonnay-amd64.deb
+sudo dpkg -i Libation.11.1.0-linux-chardonnay-amd64.deb
 
 # Install Steam Flatpak
 flatpak install flathub com.valvesoftware.Steam
