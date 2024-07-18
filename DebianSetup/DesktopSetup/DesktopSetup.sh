@@ -20,6 +20,11 @@ sudo apt install variety -y
 echo "Installing Calibre Ebook Reader"
 sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
 
+echo "Installing Libation Audible Converter"
+cd ~/Downloads
+sudo wget https://github.com/rmcrackan/Libation/releases/download/v11.1.0/Libation.11.1.0-linux-chardonnay-amd64.deb
+sudo dpkg -i Libation.11.1.0-linux-chardonnay-amd64.deb
+
 echo "Installing Flatpak"
 sudo apt install flatpak -y 
 sudo apt install gnome-software-plugin-flatpak -y
@@ -65,7 +70,7 @@ flatpak install flathub org.gnome.meld -y
 flatpak install flathub io.github.giantpinkrobots.flatsweep -y
 flatpak install flathub app.ytmdesktop.ytmdesktop -y
 flatpak install flathub com.skype.Client -y
-flatpak install flathub com.obsproject.Studio -y
+#flatpak install flathub com.obsproject.Studio -y
 flatpak install flathub org.gnome.DejaDup -y
 flatpak install flathub org.libreoffice.LibreOffice -y
 flatpak install flathub io.github.dvlv.boxbuddyrs -y
@@ -75,7 +80,6 @@ flatpak install flathub us.zoom.Zoom -y
 flatpak install flathub app.ytmdesktop.ytmdesktop -y
 flatpak install flathub com.github.tchx84.Flatseal -y
 flatpak install flathub com.obsproject.Studio -y
-flatpak install flathub com.skype.Client -y
 flatpak install flathub io.dbeaver.DBeaverCommunity -y
 flatpak install flathub io.github.dvlv.boxbuddyrs -y
 flatpak install flathub io.github.flattool.Warehouse -y
@@ -86,6 +90,7 @@ flatpak install flathub md.obsidian.Obsidian -y
 flatpak install flathub org.gnome.Builder -y
 flatpak install flathub org.kde.kdenlive -y
 flatpak install flathub org.kde.krdc -y
+flatpak install org.gnome.Podcasts -y
 
 
 echo "Cloning Personal Git Hub Repos"
