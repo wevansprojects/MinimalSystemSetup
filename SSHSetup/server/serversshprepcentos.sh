@@ -45,4 +45,4 @@ echo "Subsystem       sftp    /usr/libexec/openssh/sftp-server" >> sshd_config
 
 sudo mv sshd_config /etc/ssh/
 sudo chmod 600 /etc/ssh/sshd_config
-sudo systemctl restart ssh
+sudo systemctl restart sshd
