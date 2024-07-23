@@ -19,7 +19,7 @@ sudo firewall-cmd --zone=public --list-all
 printf "\n"
 echo "Backup Old SSH File and Replace It"
 cd /etc/ssh
-sudo cp sshd_config ssh_config_old
+sudo cp sshd_config sshd_config_old
 cd /home/$USER 
 touch sshd_config
 rm sshd_config
