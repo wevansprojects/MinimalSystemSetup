@@ -1,0 +1,19 @@
+# How to visualize using Paramiko to Remote SSH and deploy
+
+In this folder we can see multiple files examples of how to use
+Paramiko and SSH to install uninstall and schedule cron jobs on a server
+
+A Remote Installer Script
+A Remote Uninstaller Script
+A Remote Cron Script
+A Remote UnCron Script
+A Remote Update Script
+A Remote Deploy Script
+
+With these script examples we can combine them administer multiple servers
+Remotely.
+
+We should also pay attention to the fact that I only care fore Redhat or Debian.
+So there will need to have one other folder with the above scripts doing the same
+but for a Redhat or Debian distribution.
+
