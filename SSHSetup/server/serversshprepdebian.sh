@@ -42,7 +42,7 @@ echo "KbdInteractiveAuthentication no" >> sshd_config
 echo "PubKeyAuthentication yes" >> sshd_config
 echo "PasswordAuthentication yes" >> sshd_config
 echo "PermitEmptyPasswords no" >> sshd_config
-echo "UsePAM no" >> sshd_config
+echo "UsePAM yes" >> sshd_config
 echo "X11Forwarding no" >> sshd_config
 echo "Subsystem       sftp    /usr/lib/openssh/sftp-server" >> sshd_config
 
