@@ -69,15 +69,7 @@ for server in serverstocheck:
         print("System Log Output:")
         print(":================:")
         print("------------------------------------------------")
-        #command = "sudo -S cat /var/log/dnf.log|grep 'DDEBUG Command\|\INFO Complete!\|INFO Package'|tail -10"
-#        command = "sudo -S journalctl |tail -10"
-#        stdin, stdout, stderr = client.exec_command(command)
-#        stdin.write(password + "\n")
-#        print(stdout.read().decode("utf-8"))
-
-
         command = "sudo -S cat /var/log/dnf.log|grep 'dnf install'|tail -10"
-
         stdin, stdout, stderr = client.exec_command(command)
         stdin.write(password + "\n")
         print(stdout.read().decode("utf-8"))
@@ -86,11 +78,8 @@ for server in serverstocheck:
         stdin, stdout, stderr = client.exec_command(command)
         stdin.write(password + "\n")
         print(stdout.read().decode("utf-8"))
-
-
-
-
         time.sleep(1)
+        
         client.close()
 
     else:
