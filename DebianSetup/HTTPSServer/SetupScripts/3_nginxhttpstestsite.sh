@@ -52,7 +52,8 @@ echo "Create Symlink to Enable the Site"
 sudo ln -s /etc/nginx/sites-available/testsite /etc/nginx/sites-enabled/testsite
 
 echo "Remove the default site link"
-sudo trash-put /etc/nginx/sites-enabled/default 
+sudo trash-put /etc/nginx/sites-enabled/default
+sudo trash-put $HOME/openssl
 sudo trash-empty
 echo "Start Nginx"
 sudo systemctl start nginx
