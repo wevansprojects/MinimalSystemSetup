@@ -23,7 +23,6 @@ for server in serverstocheck:
     # If the IP Address is reachable then we can run our paramiko script
     if response == 0:
         status = server.rstrip() + " is Reachable\n"
-
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         # ssh_key = paramiko.RSAKey.from_private_key_file(privatekey, password)
