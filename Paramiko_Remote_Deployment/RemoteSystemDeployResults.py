@@ -54,7 +54,6 @@ for server in serverstocheck:
         print("System Log Output:")
         print(":================:")
         print("------------------------------------------------")
-#       command = "sudo -S journalctl| grep \"CROND\|CRON\" |tail -20"
         command = "sudo -S journalctl --since '2024-09-11 18:30' --until '2024-09-11 18:32'|grep 'COMMAND\|\|nginx\|service'|grep -v 'session\|Reloading'"
 
         stdin, stdout, stderr = client.exec_command(command)
