@@ -28,7 +28,6 @@ for server in serverstocheck:
 
     if response == 0:
         status = server.rstrip() + " is Reachable\n"
-        # print(status)
 
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
