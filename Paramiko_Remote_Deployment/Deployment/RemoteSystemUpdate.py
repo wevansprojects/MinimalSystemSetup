@@ -9,7 +9,9 @@ user_folder_name = os.path.expanduser("~")
 user = os.path.basename(user_folder_name)
 home_path = os.path.join("/home/" + user)
 
-config_file_path = os.path.join(home_path + "/Paramiko_Remote_Deployment/yaml/config.yaml")
+config_file_path = os.path.join(
+    home_path + "/Paramiko_Remote_Deployment/yaml/config.yaml"
+)
 script_ftp_file_path = os.path.join(home_path + "/Paramiko_Remote_Deployment/pyscript/")
 
 with open(config_file_path) as yamlfile:
@@ -26,7 +28,6 @@ for server in serverstocheck:
 
     if response == 0:
         status = server.rstrip() + " is Reachable\n"
-        # print(status)
 
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -37,7 +38,10 @@ for server in serverstocheck:
 
         ftp_client = client.open_sftp()
         ftp_client.put(script_ftp_file_path + "sysinfo.py", "/tmp/sysinfo.py")
-        ftp_client.put(script_ftp_file_path + "schedulesystemupdate.sh", "/tmp/schedulesystemupdate.sh")
+        ftp_client.put(
+            script_ftp_file_path + "schedulesystemupdate.sh",
+            "/tmp/schedulesystemupdate.sh",
+        )
         ftp_client.put(script_ftp_file_path + "updatesystem.sh", "/tmp/updatesystem.sh")
         ftp_client.close()
 
@@ -85,5 +89,4 @@ for server in serverstocheck:
 
     else:
         status = server + " is NOT Reachable"
-        # print(status)
         print(f"\nThe Server {server} did not ping it will be ignored\n")
