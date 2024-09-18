@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo "Testing"
 echo "Setting up nginx test site and permissions"
 sudo mkdir -p /var/www/testsite.com/html
 sudo chmod -R 755 /var/www/testsite.com
@@ -10,7 +9,6 @@ sudo cp -p index.html /var/www/testsite.com/html
 sudo chown root:root testsite.com.conf 
 sudo cp -p testsite.com.conf /etc/nginx/conf.d/
 
-echo "-------"
 echo "Setup and Apply the Self Signed Certificate"
 sudo mkdir -p /etc/nginx/ssl
 mkdir $HOME/openssl
@@ -21,17 +19,7 @@ sudo chmod u+x self-signed-cert.sh
 sudo cp rootCA.crt /etc/pki/ca-trust/source/anchors/
 sudo cp testsite.com.crt testsite.com.key /etc/nginx/ssl
 sudo update-ca-trust
-#cd $HOME/MinimalSystemSetup/RedHatSetup/HTTPSServer/SetupScripts/
-
 cd /tmp/MinimalSystemSetup/RedHatSetup/HTTPSServer/SetupScripts/
-#echo "Setting up nginx test site and permissions"
-#sudo mkdir -p /var/www/testsite.com/html
-#sudo chmod -R 755 /var/www/testsite.com
-#sudo chown -R nginx:nginx /var/www/testsite.com/
-#sudo chown nginx:nginx index.html
-#sudo cp -p index.html /var/www/testsite.com/html
-#sudo chown root:root testsite.com.conf 
-#sudo cp -p testsite.com.conf /etc/nginx/conf.d/
 
 echo "Adding HTTPS Firewall Rules"
 sudo firewall-cmd --permanent --add-service=http
