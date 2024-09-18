@@ -47,7 +47,7 @@ sudo restorecon -Rv /var/www/testsite.com
 echo "Enable and startup nginx"
 echo "Remove Old Cert Folder"
 sudo trash-put $HOME/openssl
-sudo trash-empty
+sudo trash-empty -y
 echo "Start Nginx"
 sudo systemctl enable nginx
 sudo systemctl start nginx
