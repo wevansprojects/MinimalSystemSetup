@@ -1,8 +1,7 @@
 #!/bin/bash
 
-echo "Setup a self signed certificate"
+echo "Setup and Apply the Self Signed Certificate"
 sudo mkdir -p /etc/nginx/ssl
-echo "Creating the Certificates"
 mkdir $HOME/openssl
 cp self-signed-cert.sh $HOME/openssl
 cd $HOME/openssl
@@ -11,12 +10,14 @@ sudo chmod u+x self-signed-cert.sh
 sudo cp rootCA.crt /etc/pki/ca-trust/source/anchors/
 sudo cp testsite.com.crt testsite.com.key /etc/nginx/ssl
 sudo update-ca-trust
+cd $HOME/MinimalSystemSetup/RedHatSetup/HTTPSServer/SetupScripts/
+
 echo "Setting up nginx test site and permissions"
 sudo mkdir -p /var/www/testsite.com/html
 sudo chmod -R 755 /var/www/testsite.com
-sudo chown -R nginx:nginx /var/www/testsite.com/html
+sudo chown -R nginx:nginx /var/www/testsite.com/
 sudo chown nginx:nginx index.html
-sudo cp -p index.html /var/www/testsite.com
+sudo cp -p index.html /var/www/testsite.com/html
 sudo chown root:root testsite.com.conf 
 sudo cp -p testsite.com.conf /etc/nginx/conf.d/
 
