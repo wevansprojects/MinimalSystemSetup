@@ -34,7 +34,7 @@ sudo semanage fcontext -a -t httpd_sys_content_t "/etc/nginx/ssl(/.*)?"
 sudo restorecon -Rv /etc/nginx/ssl
 # The below ensures SELinux allows Nginx to serve files from your websites directory.
 sudo semanage fcontext -a -t httpd_sys_content_t "/var/www/testsite.com(/.*)?"
-sudo restorecon -Rv /var/www/testsite.com
+sudo restorecon -Rv /var/www/testsite.com 
 
 echo "Add Self Signed Certificate As Trusted Cert"
 sudo cp testsite.com.crt /etc/pki/ca-trust/source/anchors/
