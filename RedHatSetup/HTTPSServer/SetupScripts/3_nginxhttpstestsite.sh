@@ -2,9 +2,15 @@
 
 echo "Setup a self signed certificate"
 sudo mkdir -p /etc/nginx/ssl
-sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/testsite.com.key -out /etc/nginx/ssl/testsite.com.crt \
-  -subj "/C=US/ST=State/L=City/O=Organization/OU=OrgUnit/CN=testsite.com"
-
+echo "Creating the Certificates"
+mkdir $HOME/openssl
+cp self-signed-cert.sh $HOME/openssl
+cd $HOME/openssl
+sudo chmod u+x self-signed-cert.sh
+./self-signed-cert.sh testsite.com 
+sudo cp rootCA.crt /etc/pki/ca-trust/source/anchors/
+sudo cp testsite.com.crt testsite.com.key /etc/nginx/ssl
+sudo update-ca-trust
 echo "Setting up nginx test site and permissions"
 sudo mkdir -p /var/www/testsite.com/html
 sudo chmod -R 755 /var/www/testsite.com
@@ -41,5 +47,9 @@ sudo cp testsite.com.crt /etc/pki/ca-trust/source/anchors/
 sudo update-ca-trust
 
 echo "Enable and startup nginx"
+echo "Remove Old Cert Folder"
+sudo trash-put $HOME/openssl
+sudo trash-empty
+echo "Start Nginx"
 sudo systemctl enable nginx
 sudo systemctl start nginx
