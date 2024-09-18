@@ -8,7 +8,7 @@ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/
 echo "Setting up nginx test site and permissions"
 sudo mkdir -p /var/www/testsite.com/html
 sudo chmod -R 755 /var/www/testsite.com
-sudo chown -R nginx:nginx /var/www/testsite.com
+sudo chown -R nginx:nginx /var/www/testsite.com/html
 sudo chown nginx:nginx index.html
 sudo cp -p index.html /var/www/testsite.com
 sudo chown root:root testsite.com.conf 
@@ -35,6 +35,11 @@ sudo restorecon -Rv /etc/nginx/ssl
 # The below ensures SELinux allows Nginx to serve files from your websites directory.
 sudo semanage fcontext -a -t httpd_sys_content_t "/var/www/testsite.com(/.*)?"
 sudo restorecon -Rv /var/www/testsite.com
+
+echo "Add Self Signed Certificate As Trusted Cert"
+sudo cp testsite.com.crt /etc/pki/ca-trust/source/anchors/
+sudo update-ca-trust
+
 echo "Enable and startup nginx"
 sudo systemctl enable nginx
 sudo systemctl start nginx
