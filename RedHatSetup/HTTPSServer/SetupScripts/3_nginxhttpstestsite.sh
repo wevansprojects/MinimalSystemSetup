@@ -4,11 +4,11 @@ echo "Setup and Apply the Self Signed Certificate"
 sudo mkdir -p /etc/nginx/ssl
 mkdir $HOME/openssl
 cp self-signed-cert.sh $HOME/openssl
-cd $HOME/openssl
-sudo chmod u+x self-signed-cert.sh
-./self-signed-cert.sh testsite.com 
-sudo cp rootCA.crt /etc/pki/ca-trust/source/anchors/
-sudo cp testsite.com.crt testsite.com.key /etc/nginx/ssl
+#cd $HOME/openssl
+sudo chmod u+x $HOME/openssl/self-signed-cert.sh
+$HOME/openssl/./self-signed-cert.sh testsite.com 
+sudo cp $HOME/openssl/rootCA.crt /etc/pki/ca-trust/source/anchors/
+sudo cp $HOME/openssl/testsite.com.crt testsite.com.key /etc/nginx/ssl
 sudo update-ca-trust
 #cd $HOME/MinimalSystemSetup/RedHatSetup/HTTPSServer/SetupScripts/
 
