@@ -50,4 +50,4 @@ sudo trash-empty
 echo "Start Nginx"
 sudo systemctl enable nginx
 sudo systemctl start nginx
-lynx https://testsite.com/
+#lynx https://testsite.com/
