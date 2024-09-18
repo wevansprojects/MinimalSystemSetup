@@ -10,8 +10,9 @@ sudo chmod u+x self-signed-cert.sh
 sudo cp rootCA.crt /etc/pki/ca-trust/source/anchors/
 sudo cp testsite.com.crt testsite.com.key /etc/nginx/ssl
 sudo update-ca-trust
-cd $HOME/MinimalSystemSetup/RedHatSetup/HTTPSServer/SetupScripts/
+#cd $HOME/MinimalSystemSetup/RedHatSetup/HTTPSServer/SetupScripts/
 
+cd /tmp/MinimalSystemSetup/RedHatSetup/HTTPSServer/SetupScripts/
 echo "Setting up nginx test site and permissions"
 sudo mkdir -p /var/www/testsite.com/html
 sudo chmod -R 755 /var/www/testsite.com
