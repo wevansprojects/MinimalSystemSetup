@@ -11,7 +11,12 @@ echo "This is a Redhat Based System Using DNF to Install Packages"
 dnf install git
 
   # Install on Redhat based systems
-echo "Nothing To Do Here!!!"
+cd /tmp
+git clone https://github.com/${project}/${repo}.git
+cd ${repo}
+cd /tmp/${repo}/RedHatSetup/HTTPSServer/
+sudo chmod u+x *.sh
+./RedhatHTTPSSiteSetup.sh
 else
 
 # Install on Debian based systems
@@ -28,3 +33,4 @@ sudo chmod u+x *.sh
 #3_nginxhttpstestsite_mod.sh
 rm -rf /tmp/${repo}
 fi
+
