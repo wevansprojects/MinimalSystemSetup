@@ -9,14 +9,14 @@ repo="MinimalSystemSetup"
 if [[ $distro == *"rhel"* ]]; then
 echo "This is a Redhat Based System Using DNF to Install Packages"
 dnf install git
-
-  # Install on Redhat based systems
 cd /tmp
 git clone https://github.com/${project}/${repo}.git
 cd ${repo}
-cd /tmp/${repo}/RedHatSetup/HTTPSServer/
+cd RedHatSetup/HTTPSServer/SetupScripts
 sudo chmod u+x *.sh
-./RedhatHTTPSSiteSetup.sh
+./1_Prerequisites.sh
+./3_nginxhttpstestsite.sh
+rm -rf /tmp/${repo}
 else
 
 # Install on Debian based systems
@@ -25,12 +25,10 @@ apt install git
 cd /tmp
 git clone https://github.com/${project}/${repo}.git
 cd ${repo}
-cd /tmp/${repo}/DebianSetup/HTTPSServer/SetupScripts
+cd DebianSetup/HTTPSServer/SetupScripts
 sudo chmod u+x *.sh
 ./1_Prerequisites.sh
-#./2_bashrchelper.sh
 ./3_nginxhttpstestsite.sh
-#3_nginxhttpstestsite_mod.sh
 rm -rf /tmp/${repo}
 fi
 
