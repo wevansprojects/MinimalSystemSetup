@@ -5,6 +5,7 @@ sudo apt purge libreoffice* -y
 sudo apt autoremove libreoffice -y
 
 echo "Installing Required Packages"
+sudo apt install gnome-themes-extra -y
 sudo apt install vim -y
 sudo apt install unattended-upgrades -y
 sudo apt install git -y
