@@ -69,8 +69,8 @@ echo "Installing Steam"
 #flatpak install flathub com.github.tchx84.Flatseal
 
 # Core Flatpak Packages
-flatpak install flathub io.github.flattool.Warehouse -y
-flatpak install flathub com.github.tchx84.Flatseal -y
+flatpak install flathub io.github.flattool.Warehouse –system
+flatpak install flathub com.github.tchx84.Flatseal -system
 
 # Install Additional Flatpak Apps
 #flatpak install flathub io.github.martinrotter.rssguardlite -y
