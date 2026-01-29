@@ -1,6 +1,10 @@
 #!/bin/bash
 echo "Updating the System"
 sudo apt update -y; sudo apt upgrade -y
+
+echo "Purging Unwanted Packages"
+sudo apt purge firefox-esr -y
+sudo apt purge nano -y
 sudo apt purge libreoffice* -y
 sudo apt autoremove libreoffice -y
 
@@ -24,28 +28,25 @@ echo "Installing Flatpak"
 #sudo apt install gnome-software-plugin-flatpak -y
 #sudo apt install plasma-discover-backend-flatpak -y
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+#sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-echo "Installing VLC and Multimedia Codecs"
+#echo "Installing VLC and Multimedia Codecs"
 #sud apt install libavcodec-extra -y
 #sudo apt install vlc -y
 
-echo "Purging Unwanted Packages"
-#sudo apt purge firefox-esr -y
-#sudo apt purge nano -y
 
 echo "Installing Chromium"
-#sudo apt install chromium -y
+sudo apt install chromium -y
 
-echo "Adding Debian Backports"
+#echo "Adding Debian Backports"
 #sudo touch /etc/apt/sources.list.d/backports.list
 #echo "deb http://deb.debian.org/debian/ bookworm-backports contrib main non-free non-free-firmware" |sudo tee /etc/apt/sources.list.d/backports.list
 #sudo apt update
 
-echo "Install Latest Debian Kernel From Backports"
+#echo "Install Latest Debian Kernel From Backports"
 #sudo apt -t bookworm-backports install linux-image-amd64 -y
 
-echo "Installing Steam"
+#echo "Installing Steam"
 # Install steam-devices
 #sudo apt install steam-devices
 # Add in the required device files from github
@@ -69,8 +70,8 @@ echo "Installing Steam"
 #flatpak install flathub com.github.tchx84.Flatseal
 
 # Core Flatpak Packages
-flatpak install --system flathub io.github.flattool.Warehouse
-flatpak install --system flathub com.github.tchx84.Flatseal
+#flatpak install --system flathub io.github.flattool.Warehouse
+#flatpak install --system flathub com.github.tchx84.Flatseal
 
 # Install Additional Flatpak Apps
 #flatpak install flathub io.github.martinrotter.rssguardlite -y
