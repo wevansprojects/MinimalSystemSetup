@@ -15,6 +15,7 @@ sudo apt install unattended-upgrades -y
 sudo apt install git -y
 sudo apt install trash-cli -y
 sudo apt install htop -y
+sudo apt install ripgrep -y
 sudo apt install terminator -y
 sudo apt install menulibre -y
 sudo apt install curl -y
